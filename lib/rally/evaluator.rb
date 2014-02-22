@@ -4,8 +4,8 @@ module Rally
       @options = options
     end
 
-    def eval(&block)
-      evaluator.instance_eval(&block)
+    def eval(*args, &block)
+      evaluator.instance_eval(*args, &block)
     end
 
   private

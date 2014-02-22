@@ -21,8 +21,16 @@ describe Rally::Evaluator do
   end
 
   describe '#eval' do
-    it 'evals some code' do
-      expect(evaluator.eval { fake.provision }).to be :provisioned
+    context 'when given a block' do
+      it 'evals the code' do
+        expect(evaluator.eval { fake.provision }).to be :provisioned
+      end
+    end
+
+    context 'when given a string' do
+      it 'evals the code' do
+        expect(evaluator.eval('fake.provision')).to be :provisioned
+      end
     end
 
     context 'when locals are provided' do
