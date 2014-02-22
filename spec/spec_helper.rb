@@ -1,5 +1,6 @@
 require 'bundler/setup'
 Bundler.require :default, :test
+require 'webmock/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

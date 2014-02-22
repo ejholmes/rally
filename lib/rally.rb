@@ -1,4 +1,6 @@
 require 'active_support'
+require 'faraday'
+require 'faraday_middleware'
 
 require 'rally/version'
 
