@@ -16,10 +16,8 @@ module Rally
       locals = options[:locals] || []
 
       Module.new do
-        locals.each do |k,v|
-          self.class.__send__ :define_method, k do
-            v
-          end
+        locals.each do |local,value|
+          self.class.__send__(:define_method, local) { value }
         end
 
         class << self
