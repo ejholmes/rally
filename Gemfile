@@ -4,5 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
+  gem 'rb-fsevent'
   gem 'guard-rspec'
+  gem 'guard-cucumber'
 end
