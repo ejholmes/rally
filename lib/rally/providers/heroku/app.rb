@@ -1,7 +1,7 @@
 module Rally
   module Providers
     class Heroku::App < Rally::Resource
-      autoload :Addon, 'rally/services/heroku/app/addon'
+      autoload :Drain, 'rally/providers/heroku/app/drain'
 
       attr_reader :id
 
@@ -11,9 +11,8 @@ module Rally
       #
       # Returns Faraday::Response
       def drain(url)
-        connection.post "/apps/#{id}/log-drains" do |req|
-          req.body = { url: url }
-        end
+        drain = Drain.new(self)
+        drain.init(url)
       end
 
     private

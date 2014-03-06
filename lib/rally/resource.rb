@@ -13,7 +13,12 @@ module Rally
     #
     # Returns the Resource.
     def initialize(provider)
-      @provider = provider
+      if provider.is_a?(Resource)
+        @parent = provider
+        @provider = provider.provider
+      else
+        @provider = provider
+      end
     end
 
     # Public: This is the primary interface into creating Resources. Resources
@@ -25,18 +30,19 @@ module Rally
       fetch(*args) || create(*args)
     end
 
-  private
+  protected
 
     attr_reader :provider
+    attr_reader :parent
 
     # Internal: Implement the logic to create your Resource.
-    def create
-      raise NotImplementedError
+    def create(*args)
+      raise NotImplementedError, 'Implement a method to create the resource.'
     end
 
     # Internal: Implement the logic to fetch your Resource.
-    def fetch
-      raise NotImplementedError
+    def fetch(*args)
+      raise NotImplementedError, 'Implement a method to fetch the resource.'
     end
 
     # Internal: Most providers are JSON based REST api's, so we instantiate
