@@ -1,4 +1,12 @@
 module Rally
+  # Public: A Provider is a Third-Party service that provides resources.
+  # Some examples of Providers:
+  #
+  #   Heroku - provides Apps
+  #   GitHub - provides Repos
+  #   Papertrail - provides Drains
+  #
+  # This is an abstract class for Providers to inherit from.
   class Provider
     module DSL
 
