@@ -1,5 +1,5 @@
 module Rally
-  class Evaluator
+  class Runner
     def initialize(options = {})
       @options = options
     end

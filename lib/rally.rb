@@ -5,6 +5,19 @@ require 'faraday_middleware'
 require 'rally/version'
 
 module Rally
+  extend ActiveSupport::Autoload
+
+  autoload :API
+  autoload :Service
+  autoload :Resource
+  autoload :Runner
+
+  module Services
+    extend ActiveSupport::Autoload
+
+    autoload :Heroku
+  end
+
   class << self
     def logger
       @logger ||= Logger.new(STDOUT)
@@ -28,14 +41,7 @@ module Rally
   private
 
     def evaluator
-      @evaluator ||= Evaluator.new
+      @evaluator ||= Runner.new
     end
   end
 end
-
-require 'rally/api'
-require 'rally/service'
-require 'rally/evaluator'
-require 'rally/resource'
-
-require 'rally/services/heroku'

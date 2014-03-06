@@ -12,7 +12,7 @@ class FakeService
   end
 end
 
-describe Rally::Evaluator do
+describe Rally::Runner do
   let(:options) { {} }
   subject(:evaluator) { described_class.new(options) }
 
