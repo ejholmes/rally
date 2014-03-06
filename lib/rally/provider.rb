@@ -35,6 +35,13 @@ module Rally
         self.to_s.demodulize.downcase
       end
 
+      # Public: The configuration for this Provider.
+      #
+      # Returns a Hash.
+      def configuration
+        Rally.configuration[name]
+      end
+
     protected
 
       # Internal: Gets called when a provider subclasses this base class. Registers
@@ -46,6 +53,11 @@ module Rally
       def inherited(base)
         Rally.register_provider(base)
       end
+    end
+
+    # Public: See Rally:Provider.configuration
+    def configuration
+      self.class.configuration
     end
   end
 end

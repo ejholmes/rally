@@ -44,7 +44,7 @@ module Rally
 
   private
 
-  # Internal: A Rally::Runner instance to evaluate code inside.
+    # Internal: A Rally::Runner instance to evaluate code inside.
     def evaluator
       @evaluator ||= Runner.new
     end

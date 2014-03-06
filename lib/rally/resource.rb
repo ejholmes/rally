@@ -22,7 +22,7 @@ module Rally
     #
     # Returns nothing.
     def init(*args)
-      create(*args) || fetch(*args)
+      fetch(*args) || create(*args)
     end
 
   private

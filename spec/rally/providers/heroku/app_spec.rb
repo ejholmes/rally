@@ -34,4 +34,15 @@ describe Rally::Providers::Heroku::App do
       its(:id) { should eq '1234' }
     end
   end
+
+  describe '#drain' do
+    before do
+      app.stub(id: '1234')
+    end
+
+    it 'creates a drain' do
+      stub_request(:post, "#{provider.base_url}/apps/1234/log-drains").to_return(status: 201)
+      app.drain('http://foobar.com')
+    end
+  end
 end
