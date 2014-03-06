@@ -8,7 +8,7 @@ module Rally
   extend ActiveSupport::Autoload
 
   autoload :API
-  autoload :Service
+  autoload :Provider
   autoload :Resource
   autoload :Runner
 
@@ -17,12 +17,12 @@ module Rally
       @logger ||= Logger.new(STDOUT)
     end
 
-    def register_service(klass)
-      services << klass
+    def register_provider(klass)
+      providers << klass
     end
 
-    def services
-      @services ||= []
+    def providers
+      @providers ||= []
     end
 
     def setup(name, options = {})
@@ -40,4 +40,4 @@ module Rally
   end
 end
 
-require 'rally/services/heroku'
+require 'rally/providers/heroku'

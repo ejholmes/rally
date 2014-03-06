@@ -21,10 +21,10 @@ module Rally
         end
 
         class << self
-          Rally.services.each do |service|
-            define_method service.name do
-              instance_variable_get(:"@#{service.name}") or
-                instance_variable_set(:"@#{service.name}", service.new)
+          Rally.providers.each do |provider|
+            define_method provider.name do
+              instance_variable_get(:"@#{provider.name}") or
+                instance_variable_set(:"@#{provider.name}", provider.new)
             end
           end
         end

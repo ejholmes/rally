@@ -1,5 +1,5 @@
 module Rally
-  module Services
+  module Providers
     class Heroku::App < Rally::Resource
 
       attr_reader :id

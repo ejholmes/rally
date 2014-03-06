@@ -1,7 +1,7 @@
 module Rally
   class Resource
-    def initialize(service)
-      @service = service
+    def initialize(provider)
+      @provider = provider
     end
 
     def init(*args)
@@ -10,7 +10,7 @@ module Rally
 
   private
 
-    attr_reader :service
+    attr_reader :provider
 
     def create
       raise NotImplementedError
@@ -21,7 +21,7 @@ module Rally
     end
 
     def connection
-      @connection ||= Faraday.new(service.base_url) do |builder|
+      @connection ||= Faraday.new(provider.base_url) do |builder|
         builder.request :json
         builder.response :json
 

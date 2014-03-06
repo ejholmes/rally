@@ -1,7 +1,7 @@
 module Rally
-  module Services
-    class Heroku < Rally::Service
-      autoload :App, 'rally/services/heroku/app'
+  module Providers
+    class Heroku < Rally::Provider
+      autoload :App, 'rally/providers/heroku/app'
 
       base_url 'https://api.heroku.com'
 

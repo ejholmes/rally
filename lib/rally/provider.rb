@@ -1,8 +1,8 @@
 module Rally
-  class Service
+  class Provider
     module DSL
 
-      # Public: Specify the base url where Resources are located for this service.
+      # Public: Specify the base url where Resources are located for this provider.
       # 
       # base_url - The base url where all api requests go (e.g. https://api.heroku.com)
       #
@@ -19,8 +19,8 @@ module Rally
 
     class << self
 
-      # Public: The human friendly name of this service. This is used by the Runner to
-      # determine what service to call.
+      # Public: The human friendly name of this provider. This is used by the Runner to
+      # determine what provider to call.
       #
       # Returns a String.
       def name
@@ -29,14 +29,14 @@ module Rally
 
     protected
 
-      # Internal: Gets called when a service subclasses this base class. Registers
-      # the service in `Rally.services` so that it can be used by the Runner.
+      # Internal: Gets called when a provider subclasses this base class. Registers
+      # the provider in `Rally.providers` so that it can be used by the Runner.
       #
       # base - The base class (the class that is inheriting this class).
       #
       # Returns nothing.
       def inherited(base)
-        Rally.register_service(base)
+        Rally.register_provider(base)
       end
     end
   end
