@@ -9,7 +9,8 @@ module Rally
   # This is an abstract class for sub classes to inherit from.
   class Resource
 
-    # Internal: We provide the Resource with it's parent provider.
+    # Internal: We inject the Provider into the Resource. If the injected Provider is an instance
+    # of a Resource sub class, then we consider that to be the parent of this Resource.
     #
     # Returns the Resource.
     def initialize(provider)
