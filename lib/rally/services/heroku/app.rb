@@ -1,27 +1,31 @@
 module Rally
   module Services
-    class Heroku::App
-      attr_reader :name
+    class Heroku::App < Rally::Resource
 
-      def initialize(name)
-        @name = name
-      end
+      attr_reader :id
 
-      def create
-        connection.post '/apps' do |req|
-          req.body = { name: name }
-        end
+      def init(name)
+        fetch(name) || create(name)
       end
 
     private
 
-      def connection
-        @connection ||= Faraday.new('https://api.heroku.com') do |builder|
-          builder.request :json
-          builder.response :json
-
-          builder.adapter Faraday.default_adapter
+      def create(name)
+        response = connection.post '/apps' do |req|
+          req.body = { name: name }
         end
+        process response
+      end
+
+      def fetch(name)
+        response = connection.get "/apps/#{name}"
+        return if response.status == 404
+        process response
+      end
+
+      def process(response)
+        @id = response.body['id']
+        response
       end
     end
   end

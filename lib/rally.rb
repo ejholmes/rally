@@ -36,5 +36,6 @@ end
 require 'rally/api'
 require 'rally/service'
 require 'rally/evaluator'
+require 'rally/resource'
 
 require 'rally/services/heroku'

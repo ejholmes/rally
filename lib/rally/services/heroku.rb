@@ -3,9 +3,11 @@ module Rally
     class Heroku < Rally::Service
       autoload :App, 'rally/services/heroku/app'
 
+      base_url 'https://api.heroku.com'
+
       def app(name)
-        app = App.new(name)
-        app.create
+        app = App.new(self)
+        app.init(name)
         yield app if block_given?
         app
       end
