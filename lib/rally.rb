@@ -12,12 +12,6 @@ module Rally
   autoload :Resource
   autoload :Runner
 
-  module Services
-    extend ActiveSupport::Autoload
-
-    autoload :Heroku
-  end
-
   class << self
     def logger
       @logger ||= Logger.new(STDOUT)
@@ -45,3 +39,5 @@ module Rally
     end
   end
 end
+
+require 'rally/services/heroku'
