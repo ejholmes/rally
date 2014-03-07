@@ -15,3 +15,4 @@ Feature: Runner
         app.drain 'https://www.google.com'
       end
       """
+    Then I should have a drain with the url "https://www.google.com" on the app called "rally-test-app"
