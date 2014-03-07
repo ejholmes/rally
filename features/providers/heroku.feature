@@ -1,5 +1,5 @@
 @vcr
-Feature: Runner
+Feature: Heroku provider
 
   Scenario: Creating an app
     Given I run the following:
