@@ -21,15 +21,15 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 07 Mar 2014 00:28:30 GMT
+      - Fri, 07 Mar 2014 00:36:19 GMT
       Etag:
-      - '"832f4e29ed22b94d9d01f065f2edb842"'
+      - '"617cbe4d30cd2a888dc85256334fde68"'
       Last-Modified:
-      - Thu, 06 Mar 2014 23:57:05 GMT
+      - Fri, 07 Mar 2014 00:36:18 GMT
       Ratelimit-Remaining:
-      - '2399'
+      - '2377'
       Request-Id:
-      - 65f8afa9-dd19-4a11-9a33-c1f734512e67
+      - 08eb7797-bbe4-4334-aefb-24d8e937bba8
       Server:
       - nginx/1.2.8
       Status:
@@ -39,19 +39,19 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Runtime:
-      - '0.197739067'
+      - '0.175147947'
       Content-Length:
       - '376'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-06T23:57:03Z","id":"ed6de22f-b816-433c-8f3d-7565a3078cf3","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-06T23:57:05Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-06T23:57:05Z","web_url":"http://rally-test-app.herokuapp.com/"}'
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-07T00:36:17Z","id":"b98943c3-d9ff-4d1f-b60b-9ab9a679a07a","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-07T00:36:18Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-07T00:36:18Z","web_url":"http://rally-test-app.herokuapp.com/"}'
     http_version: 
-  recorded_at: Fri, 07 Mar 2014 00:28:30 GMT
+  recorded_at: Fri, 07 Mar 2014 00:36:20 GMT
 - request:
     method: get
-    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/ed6de22f-b816-433c-8f3d-7565a3078cf3/log-drains
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/b98943c3-d9ff-4d1f-b60b-9ab9a679a07a/log-drains
     body:
       encoding: US-ASCII
       string: ''
@@ -72,11 +72,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 07 Mar 2014 00:28:30 GMT
+      - Fri, 07 Mar 2014 00:36:20 GMT
       Ratelimit-Remaining:
-      - '2398'
+      - '2376'
       Request-Id:
-      - e9b18cfe-1202-469a-bd05-fe4b61dd0ab0
+      - 3bc8d04c-1621-47f2-88e3-3f2030b27ea3
       Server:
       - nginx/1.2.8
       Status:
@@ -86,7 +86,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Runtime:
-      - '0.210153416'
+      - '0.189864856'
       Content-Length:
       - '28'
       Connection:
@@ -95,10 +95,10 @@ http_interactions:
       encoding: UTF-8
       string: '[]'
     http_version: 
-  recorded_at: Fri, 07 Mar 2014 00:28:31 GMT
+  recorded_at: Fri, 07 Mar 2014 00:36:21 GMT
 - request:
     method: post
-    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/ed6de22f-b816-433c-8f3d-7565a3078cf3/log-drains
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/b98943c3-d9ff-4d1f-b60b-9ab9a679a07a/log-drains
     body:
       encoding: UTF-8
       string: '{"url":"https://www.google.com"}'
@@ -119,11 +119,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 07 Mar 2014 00:28:32 GMT
+      - Fri, 07 Mar 2014 00:36:22 GMT
       Ratelimit-Remaining:
-      - '2397'
+      - '2375'
       Request-Id:
-      - 44042359-6ae5-4eca-816d-2276310db512
+      - ebd4257e-f58c-4ae8-ae8c-59bd7776a1a7
       Server:
       - nginx/1.2.8
       Status:
@@ -133,14 +133,14 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Runtime:
-      - '1.241312976'
+      - '1.80230117'
       Content-Length:
-      - '177'
+      - '178'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"addon":null,"created_at":"2014-03-07T00:28:31Z","id":"c445d9df-beba-4720-9d84-ccdd692c9922","token":"d.959bb4c2-d5e5-41a5-9480-542dcb1e28fc","updated_at":"2014-03-07T00:28:32Z","url":"https://www.google.com"}'
+      string: '{"addon":null,"created_at":"2014-03-07T00:36:20Z","id":"b348e1a5-2948-4541-8501-b48bbbf4a58a","token":"d.85cd0613-ab76-414b-9397-f1fd0b29fb1a","updated_at":"2014-03-07T00:36:22Z","url":"https://www.google.com"}'
     http_version: 
-  recorded_at: Fri, 07 Mar 2014 00:28:33 GMT
+  recorded_at: Fri, 07 Mar 2014 00:36:23 GMT
 recorded_with: VCR 2.8.0

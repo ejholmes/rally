@@ -21,11 +21,11 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 06 Mar 2014 23:57:02 GMT
+      - Fri, 07 Mar 2014 00:36:16 GMT
       Ratelimit-Remaining:
-      - '2399'
+      - '2380'
       Request-Id:
-      - 63b79091-2b77-4735-bb89-fb392ef17ad3
+      - c004419a-5b08-44ca-b552-c705907d192a
       Server:
       - nginx/1.2.8
       Status:
@@ -35,7 +35,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Runtime:
-      - '0.218519436'
+      - '0.153989694'
       Content-Length:
       - '92'
       Connection:
@@ -44,7 +44,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"resource":"app","id":"not_found","message":"Couldn''t find that app."}'
     http_version: 
-  recorded_at: Thu, 06 Mar 2014 23:57:03 GMT
+  recorded_at: Fri, 07 Mar 2014 00:36:18 GMT
 - request:
     method: post
     uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps
@@ -68,13 +68,13 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 06 Mar 2014 23:57:04 GMT
+      - Fri, 07 Mar 2014 00:36:17 GMT
       Location:
       - http://rally-test-app.herokuapp.com/
       Ratelimit-Remaining:
-      - '2398'
+      - '2379'
       Request-Id:
-      - c03506fe-ccd8-487e-8879-13cc4ba4a0c9
+      - 79f6111f-a92f-4b00-ab1b-11d5830be675
       Server:
       - nginx/1.2.8
       Status:
@@ -84,14 +84,63 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Runtime:
-      - '0.89732985'
+      - '0.321764218'
       Content-Length:
-      - '377'
+      - '370'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-06T23:57:03Z","id":"ed6de22f-b816-433c-8f3d-7565a3078cf3","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-06T23:57:04Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-06T23:57:04Z","web_url":"http://rally-test-app.herokuapp.com/"}'
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-07T00:36:17Z","id":"b98943c3-d9ff-4d1f-b60b-9ab9a679a07a","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-07T00:36:17Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-07T00:36:17Z","web_url":"http://rally-test-app.herokuapp.com/"}'
     http_version: 
-  recorded_at: Thu, 06 Mar 2014 23:57:05 GMT
+  recorded_at: Fri, 07 Mar 2014 00:36:19 GMT
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/rally-test-app
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:36:19 GMT
+      Etag:
+      - '"617cbe4d30cd2a888dc85256334fde68"'
+      Last-Modified:
+      - Fri, 07 Mar 2014 00:36:18 GMT
+      Ratelimit-Remaining:
+      - '2378'
+      Request-Id:
+      - 1bc3ce79-81ed-44b7-ac6f-6650bb320c8c
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.234889704'
+      Content-Length:
+      - '376'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-07T00:36:17Z","id":"b98943c3-d9ff-4d1f-b60b-9ab9a679a07a","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-07T00:36:18Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-07T00:36:18Z","web_url":"http://rally-test-app.herokuapp.com/"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:36:20 GMT
 recorded_with: VCR 2.8.0
