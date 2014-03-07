@@ -16,3 +16,11 @@ Feature: Runner
       end
       """
     Then I should have a drain with the url "https://www.google.com" on the heroku app called "rally-test-app"
+
+  Scenario: Adding the hipchat deploy hook
+    Given I run the following:
+      """
+      heroku.app('rall-test-app') do |app|
+        app.hook :hipchat
+      end
+      """

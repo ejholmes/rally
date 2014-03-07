@@ -1,3 +1,7 @@
 heroku:
   username: <%= ENV['HEROKU_USERNAME'] %>
   password: <%= ENV['HEROKU_PASSWORD'] %>
+  hooks:
+    hipchat:
+      auth_token: 1234
+      room: Neckbeards

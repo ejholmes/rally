@@ -1,0 +1,195 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/rall-test-app
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:48:02 GMT
+      Ratelimit-Remaining:
+      - '2399'
+      Request-Id:
+      - a11ff079-2753-4cb5-bfe9-359105f0f51d
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 404 Not Found
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.201999161'
+      Content-Length:
+      - '92'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"resource":"app","id":"not_found","message":"Couldn''t find that app."}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:48:03 GMT
+- request:
+    method: post
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps
+    body:
+      encoding: UTF-8
+      string: '{"name":"rall-test-app"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:48:03 GMT
+      Location:
+      - http://rall-test-app.herokuapp.com/
+      Ratelimit-Remaining:
+      - '2398'
+      Request-Id:
+      - ff08d4bc-24b4-4188-8fb0-9cd13b7e66d1
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 201 Created
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.680750609'
+      Content-Length:
+      - '375'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-07T00:48:02Z","id":"dda8fda8-bc71-4f3f-bb9f-874ab4f40b58","git_url":"git@heroku.com:rall-test-app.git","maintenance":false,"name":"rall-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-07T00:48:03Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-07T00:48:03Z","web_url":"http://rall-test-app.herokuapp.com/"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:48:04 GMT
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/dda8fda8-bc71-4f3f-bb9f-874ab4f40b58/addons
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:57:49 GMT
+      Etag:
+      - '"85ca832f06d58d5fdc23486db1e15a3a"'
+      Last-Modified:
+      - Fri, 07 Mar 2014 00:48:04 GMT
+      Ratelimit-Remaining:
+      - '2399'
+      Request-Id:
+      - af466510-8f02-4346-a734-13b855bb9b2c
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.199000756'
+      Content-Length:
+      - '28'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[]'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:57:50 GMT
+- request:
+    method: post
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/dda8fda8-bc71-4f3f-bb9f-874ab4f40b58/addons
+    body:
+      encoding: UTF-8
+      string: '{"plan":"deployhooks:hipchat","config":{"auth_token":1234,"room":"Neckbeards"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:58:11 GMT
+      Ratelimit-Remaining:
+      - '2398'
+      Request-Id:
+      - ad58e0cf-4809-4560-b93e-865610dea446
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 422 Unprocessable Entity
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.296867883'
+      Content-Length:
+      - '172'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"verification_required","message":"Please verify your account
+        to install this add-on For more information, see http://devcenter.heroku.com/categories/billing
+        Verify now at https://heroku.com/verify"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:58:12 GMT
+recorded_with: VCR 2.8.0
