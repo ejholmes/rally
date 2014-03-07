@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/rally-test-app
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 01:03:11 GMT
+      Etag:
+      - '"016b5e3f87779f6626fd225fe2490bf0"'
+      Last-Modified:
+      - Fri, 07 Mar 2014 01:03:06 GMT
+      Ratelimit-Remaining:
+      - '2376'
+      Request-Id:
+      - 7140570c-0ad0-473d-8773-a3607ce94210
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.178256023'
+      Content-Length:
+      - '378'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-07T01:03:04Z","id":"67dc8ca3-6f7a-4930-92d2-b4c098650b03","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-07T01:03:06Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-07T01:03:06Z","web_url":"http://rally-test-app.herokuapp.com/"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 01:03:12 GMT
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/67dc8ca3-6f7a-4930-92d2-b4c098650b03/addons
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 01:03:12 GMT
+      Etag:
+      - '"8d31b9e669aa1bdc7fb409a053281bd8"'
+      Last-Modified:
+      - Fri, 07 Mar 2014 01:03:06 GMT
+      Ratelimit-Remaining:
+      - '2375'
+      Request-Id:
+      - be1ec81e-ee5d-41be-af34-8f790cf97a85
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.173638297'
+      Content-Length:
+      - '28'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[]'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 01:03:13 GMT
+- request:
+    method: post
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/67dc8ca3-6f7a-4930-92d2-b4c098650b03/addons
+    body:
+      encoding: UTF-8
+      string: '{"plan":"deployhooks:hipchat","config":{"auth_token":1234,"room":"Neckbeards"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 01:03:12 GMT
+      Ratelimit-Remaining:
+      - '2374'
+      Request-Id:
+      - 996beca6-0b61-4f8b-8e74-1c81a4138cba
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 422 Unprocessable Entity
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.207167274'
+      Content-Length:
+      - '172'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"verification_required","message":"Please verify your account
+        to install this add-on For more information, see http://devcenter.heroku.com/categories/billing
+        Verify now at https://heroku.com/verify"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 01:03:13 GMT
+recorded_with: VCR 2.8.0

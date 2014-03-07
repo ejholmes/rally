@@ -20,7 +20,7 @@ Feature: Heroku provider
   Scenario: Adding the hipchat deploy hook
     Given I run the following:
       """
-      heroku.app('rall-test-app') do |app|
+      heroku.app('rally-test-app') do |app|
         app.hook :hipchat
       end
       """
