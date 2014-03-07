@@ -1,6 +1,8 @@
 require 'active_support'
+require 'active_support/core_ext'
 require 'faraday'
 require 'faraday_middleware'
+require 'hashie'
 
 require 'rally/version'
 
@@ -11,8 +13,20 @@ module Rally
   autoload :Provider
   autoload :Resource
   autoload :Runner
+  autoload :ProviderConfiguration
 
   class << self
+
+    # Public: Loads a Rally configuration file.
+    #
+    # Returns a Hashie::Mash
+    def load(path)
+      @provider_configuration = ProviderConfiguration.load(path)
+    end
+
+    def provider_configuration
+      @provider_configuration || raise('Call Rally.load first.')
+    end
 
     # Public: Logger instance to use.
     # 
@@ -38,7 +52,7 @@ module Rally
     end
 
     # Public: Evals some code in the Rally::Runner.
-    def eval(*args, &block)
+    def run(*args, &block)
       evaluator.eval(*args, &block)
     end
 

@@ -39,7 +39,7 @@ module Rally
       #
       # Returns a Hash.
       def configuration
-        Rally.configuration[name]
+        Rally.provider_configuration[name]
       end
 
     protected
@@ -58,6 +58,22 @@ module Rally
     # Public: See Rally:Provider.configuration
     def configuration
       self.class.configuration
+    end
+
+    # Internal: Most providers are JSON based REST api's, so we instantiate
+    # a Faraday client that can be used, or overriden.
+    def connection
+      @connection ||= Faraday.new(base_url) do |builder|
+        build_middleware(builder)
+        builder.adapter Faraday.default_adapter
+      end
+    end
+
+    # Internal: Builds the faraday middleware stack. Override this if you want
+    # different middleware.
+    def build_middleware(builder)
+      builder.request :json
+      builder.response :json
     end
   end
 end

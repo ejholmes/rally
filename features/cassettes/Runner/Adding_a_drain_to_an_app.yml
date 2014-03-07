@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/rally-test-app
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:28:30 GMT
+      Etag:
+      - '"832f4e29ed22b94d9d01f065f2edb842"'
+      Last-Modified:
+      - Thu, 06 Mar 2014 23:57:05 GMT
+      Ratelimit-Remaining:
+      - '2399'
+      Request-Id:
+      - 65f8afa9-dd19-4a11-9a33-c1f734512e67
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.197739067'
+      Content-Length:
+      - '376'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"archived_at":null,"buildpack_provided_description":null,"created_at":"2014-03-06T23:57:03Z","id":"ed6de22f-b816-433c-8f3d-7565a3078cf3","git_url":"git@heroku.com:rally-test-app.git","maintenance":false,"name":"rally-test-app","owner":{"email":"eric+rally@ejholmes.net","id":"8ba6a0fd-b60f-434e-924e-77962b78ddf9"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2014-03-06T23:57:05Z","repo_size":null,"slug_size":null,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2014-03-06T23:57:05Z","web_url":"http://rally-test-app.herokuapp.com/"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:28:30 GMT
+- request:
+    method: get
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/ed6de22f-b816-433c-8f3d-7565a3078cf3/log-drains
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - id, url
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:28:30 GMT
+      Ratelimit-Remaining:
+      - '2398'
+      Request-Id:
+      - e9b18cfe-1202-469a-bd05-fe4b61dd0ab0
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.210153416'
+      Content-Length:
+      - '28'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[]'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:28:31 GMT
+- request:
+    method: post
+    uri: https://eric%2Brally%40ejholmes.net:astronomy@api.heroku.com/apps/ed6de22f-b816-433c-8f3d-7565a3078cf3/log-drains
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://www.google.com"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 07 Mar 2014 00:28:32 GMT
+      Ratelimit-Remaining:
+      - '2397'
+      Request-Id:
+      - 44042359-6ae5-4eca-816d-2276310db512
+      Server:
+      - nginx/1.2.8
+      Status:
+      - 201 Created
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '1.241312976'
+      Content-Length:
+      - '177'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"addon":null,"created_at":"2014-03-07T00:28:31Z","id":"c445d9df-beba-4720-9d84-ccdd692c9922","token":"d.959bb4c2-d5e5-41a5-9480-542dcb1e28fc","updated_at":"2014-03-07T00:28:32Z","url":"https://www.google.com"}'
+    http_version: 
+  recorded_at: Fri, 07 Mar 2014 00:28:33 GMT
+recorded_with: VCR 2.8.0

@@ -1,3 +1,5 @@
+require 'base64'
+
 module Rally
   module Providers
     class Heroku::App < Rally::Resource

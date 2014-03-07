@@ -1,0 +1,3 @@
+heroku:
+  username: <%= ENV['HEROKU_USERNAME'] %>
+  password: <%= ENV['HEROKU_PASSWORD'] %>

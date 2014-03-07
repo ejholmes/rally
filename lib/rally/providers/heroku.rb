@@ -11,6 +11,13 @@ module Rally
         yield app if block_given?
         app
       end
+
+      def connection
+        super.tap do |conn|
+          conn.headers['Accept'] = 'application/vnd.heroku+json; version=3'
+          conn.headers['Authorization'] = "Basic #{Base64.encode64("#{configuration.username}:#{configuration.password}")}"
+        end
+      end
     end
   end
 end

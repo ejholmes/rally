@@ -15,8 +15,9 @@ module Rally
     # Returns the Resource.
     def initialize(provider)
       if provider.is_a?(Resource)
-        @parent = provider
-        @provider = provider.provider
+        # Inherit things from the parent resource.
+        @parent     = provider
+        @provider   = provider.provider
       else
         @provider = provider
       end
@@ -46,20 +47,13 @@ module Rally
       raise NotImplementedError, 'Implement a method to fetch the resource.'
     end
 
-    # Internal: Most providers are JSON based REST api's, so we instantiate
-    # a Faraday client that can be used, or overriden.
-    def connection
-      @connection ||= Faraday.new(provider.base_url) do |builder|
-        build_middleware(builder)
-        builder.adapter Faraday.default_adapter
-      end
+    # Internal: Configuration for the provider.
+    def configuration
+      provider.configuration
     end
 
-    # Internal: Builds the faraday middleware stack. Override this if you want
-    # different middleware.
-    def build_middleware(builder)
-      builder.request :json
-      builder.response :json
+    def connection
+      provider.connection
     end
   end
 end
